@@ -65,3 +65,25 @@ plt.xticks(rotation=45)
 
 plt.savefig("ratings_distribution.png")
 plt.show()
+
+# --------------------------------
+# 5. Top 10 Netflix Genres
+# --------------------------------
+
+# Split genres and count them
+genres = data["listed_in"].str.split(",", expand=True).stack()
+
+genre_counts = genres.value_counts().head(10)
+
+plt.figure(figsize=(10,5))
+genre_counts.plot(kind="bar")
+
+plt.title("Top 10 Netflix Genres")
+plt.xlabel("Genre")
+plt.ylabel("Number of Titles")
+
+plt.xticks(rotation=45)
+
+plt.savefig("top_genres.png")
+
+plt.show()

@@ -35,3 +35,6 @@ This project analyzes Netflix movies and TV shows using Python.
 
 ### Ratings Distribution
 ![Ratings](ratings_distribution.png)
+
+### Top Netflix Genres
+![Top Genres](top_genres.png)
